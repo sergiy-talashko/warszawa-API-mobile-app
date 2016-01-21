@@ -1,0 +1,10 @@
+{
+  "name": "RomsApp",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4",
+    "restangular": "~1.5.1",
+    "lodash": "3.10.1",
+    "angular-base64": "~2.0.5"
+  }
+}
