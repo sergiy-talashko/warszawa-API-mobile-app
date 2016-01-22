@@ -1,8 +1,7 @@
 
 angular.module('roms', [
   'ionic',
-  'restangular',
-  'base64',
+  'ngCordova',
   'roms.controllers',
   'roms.service'
 ])
@@ -39,16 +38,12 @@ angular.module('roms', [
       templateUrl: 'templates/wifi.html',
       controller: 'WifiCtrl'
     })
-    .state('root.hotel', {
-      url: '/hotel',
-      templateUrl: 'templates/hotel.html',
-      controller: 'HotelCtrl'
+    .state('root.number', {
+      url: '/number',
+      templateUrl: 'templates/number.html',
+      controller: 'NumberCtrl'
     }
   );
 
   $urlRouterProvider.otherwise('/root/main');
-})
-.config(function(RestangularProvider, $base64) {
-    var token = 'Basic ' + $base64.encode("ute:ute!2016");
-  RestangularProvider.setBaseUrl('https://api.bihapi.pl').setDefaultHeaders({Authorization: token});
 });
