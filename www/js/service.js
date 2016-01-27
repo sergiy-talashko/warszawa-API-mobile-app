@@ -25,11 +25,11 @@ angular.module('roms.service', [])
       })
     }
 
-    function getPositionByTelephone(){
+    function getPositionByTelephone(phone){
 
       return $http({
         method: 'GET',
-        url: '',
+        url: 'https://api.bihapi.pl/v2/rest/terminal_location/location?query={"acceptableAccuracy":"10","address":"tel:'+phone+'","requestedAccuracy":"10","tolerance":"DelayTolerant"}',
         headers: {
           Authorization: "Basic dXRlOnV0ZSEyMDE2"
         }
