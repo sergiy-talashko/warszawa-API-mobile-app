@@ -164,6 +164,7 @@ angular.module('roms.controllers', [])
       apiService.getPositionByTelephone(number).then(function(resp){
         if (resp){
           var infoWindow = new google.maps.InfoWindow();
+          $scope.map.setCenter(new google.maps.LatLng(resp.result.latitude, resp.result.longitude));
           var marker = new google.maps.Marker({
             position: new google.maps.LatLng(resp.result.latitude, resp.result.longitude),
             map: $scope.map,
