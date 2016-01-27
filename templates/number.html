@@ -1,0 +1,31 @@
+<ion-view view-title="Number">
+  <ion-content>
+    <div ng-show="numberData">
+      <div class="card">
+        <div class="item item-divider">
+          <strong>IMEI:</strong>
+        </div>
+        <div class="item item-text-wrap">
+          {{numberData.imei}}
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          <strong>Msisdn:</strong>
+        </div>
+        <div class="item item-text-wrap">
+          {{numberData.msisdn}}
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          <strong>Handset:</strong>
+        </div>
+        <div class="item item-text-wrap">
+          {{numberData.handset}}
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
